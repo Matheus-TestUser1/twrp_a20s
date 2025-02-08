@@ -14,17 +14,20 @@
 # limitations under the License.
 #
 
-# Inherit from the common Open Source product configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
+DEVICE_PATH := device/samsung/$(DEVICE_CODENAME)
 
-# Inherit additional product configuration
-$(call inherit-product, build/target/product/embedded.mk)
+
+# Inherit from common AOSP config
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+
+# Inherit some common TWRP stuff.
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Copy files inside recovery/root of a20s device tree
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/samsung/a20s/recovery/root,recovery/root)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := omni_a20s
+PRODUCT_NAME := twrp_a20s
 PRODUCT_DEVICE := a20s
 PRODUCT_MODEL := SM-A207M
 PRODUCT_BRAND := samsung
