@@ -126,6 +126,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # TWRP Configuration: Basic config
+TW_DEVICE_VERSION := TWRP for Galaxy a20s
 TW_HAS_DOWNLOAD_MODE := true
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
