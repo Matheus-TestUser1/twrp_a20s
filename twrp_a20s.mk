@@ -23,6 +23,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 # Inherit some common TWRP stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
 
+# Inherit device configuration
+$(call inherit-product, device/samsung/a20s/device.mk)
+
+
 # Copy files inside recovery/root of a20s device tree
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/samsung/a20s/recovery/root,recovery/root)
 
