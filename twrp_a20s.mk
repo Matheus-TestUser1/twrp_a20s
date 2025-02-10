@@ -31,7 +31,7 @@ $(call inherit-product, device/samsung/a20s/device.mk)
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/samsung/a20s/recovery/root,recovery/root)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := twrp_a20s
+PRODUCT_NAME := twrp_a20s-custom
 PRODUCT_DEVICE := a20s
 PRODUCT_MODEL := SM-A207M
 PRODUCT_BRAND := samsung
