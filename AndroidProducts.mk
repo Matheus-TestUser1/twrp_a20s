@@ -15,6 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/twrp_a20s-custom.mk
+    $(LOCAL_DIR)/twrp_a20s-custom.mk
 
-COMMON_LUNCH_CHOICES := twrp_a20s-custom-eng
+COMMON_LUNCH_CHOICES := \
+    twrp_a20s-custom-eng
