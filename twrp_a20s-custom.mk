@@ -32,7 +32,7 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/samsung/a20s/recove
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := twrp_a20s-custom
-PRODUCT_DEVICE := a20s_custom
+PRODUCT_DEVICE := a20s-custom
 PRODUCT_MODEL := SM-A207M
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
