@@ -16,8 +16,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter a20s-custom, $(TARGET_DEVICE)),)
-
+ifeq ($(TARGET_DEVICE),a20s-custom)
 include $(call all-makefiles-under,$(LOCAL_PATH))
-
 endif
