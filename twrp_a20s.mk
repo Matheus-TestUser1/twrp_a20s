@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/samsung/$(DEVICE_CODENAME)
+DEVICE_PATH := device/samsung/a20s
 
 
 # Inherit from common AOSP config
