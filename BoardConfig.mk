@@ -170,7 +170,7 @@ TARGET_USES_LOGD := true
 # ===========================================
 # Assert
 # ===========================================
-TARGET_OTA_ASSERT_DEVICE := a20s,a20s-custom
+TARGET_OTA_ASSERT_DEVICE := a20s,a20sdev
 
 # System Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
