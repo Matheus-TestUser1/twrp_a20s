@@ -1,5 +1,5 @@
 #
-# Copyright 2021 The Android Open Source Project
+# Copyright (C) 2024 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,23 +14,14 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/samsung/a20s
-
-# Inherit from common AOSP config
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
-# Inherit some common TWRP stuff.
-$(call inherit-product, vendor/twrp/config/common.mk)
-
-# Inherit device configuration
-$(call inherit-product, device/samsung/a20s/device.mk)
-
-# Copy files inside recovery/root of a20s device tree
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/samsung/a20s/recovery/root,recovery/root)
-
-## Device identifier. This must come after all inclusions
-PRODUCT_NAME := twrp_a20s-custom
-PRODUCT_DEVICE := a20s-custom
-PRODUCT_MODEL := SM-A207M
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := a20s
+PRODUCT_NAME := a20sdev
 PRODUCT_BRAND := samsung
+PRODUCT_MODEL := SM-A207F
 PRODUCT_MANUFACTURER := samsung
+
